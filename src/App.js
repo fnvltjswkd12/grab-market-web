@@ -9,6 +9,14 @@ import {Switch, Route} from 'react-router-dom';
 function App(){
 
 return (
+<div>
+  <div id="header">
+    <div id="header-area">
+      <img src='images/icons/logo.png' alt="logo" />
+      </div>
+        </div>
+  <div id="body">
+  
   <Switch>
     <Route exact={true} path="/">
      <MainPageComponent />
@@ -18,10 +26,13 @@ return (
       <ProductPage />
      </Route>
 
-     <Route exact={true} path="/upload:id">
+     <Route exact={true} path="/upload/:id">
        <UploadPage />
      </Route>
      </Switch>
+
+     </div>
+</div>
         )
   }
 

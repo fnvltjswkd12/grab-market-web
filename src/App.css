@@ -1,3 +1,27 @@
 html, body, #root, #root > div {
   height: 100%;
 }
+
+#header {
+  height: 64px;
+  
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+}
+
+#body{
+  height: 100%; /* body는 대부분의 컨텐츠를 차지, 그러므로 부모 기준에서 높이를 100%. 부모의 높이와 동일하게. 얘의 부모는 body니까. body는 기본적으로 웹사이트에 보이는 전체 영역을 다 차지하기 떄문에 그 영역만큼 높이를 주었다. */
+  
+  width: 1024px; /* 네이버와 좀 비슷한 레이아웃 */
+  margin: 0 auto; /* 부모 기준으로 자식이 가운데 정렬이 된다.*/
+  padding-bottom: 24px; /* footer와 겹치지 않도록 */
+}
+
+#footer{
+  height: 200px;
+  background-color: rgb(230, 230, 230);
+}
+
+
+

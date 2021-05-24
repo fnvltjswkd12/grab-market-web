@@ -1,6 +1,24 @@
+import {useParams} from 'react-router-dom';
+
 function ProductPage(){
 
-    return <h2>상품 상세페이지</h2>
+const {id} = useParams();
+console.log(params)
+
+    return (
+
+
+<div>
+    <div id = "image-box">
+        <img src={"/"+product.imageUrl} /> 
+    </div>
+    <div id = "profile-box">
+        <img src="/icons/avatar.png" />
+        <span>{product.seller}</span>
+    </div>
+
+</div>
+    )
 };
 
 export default ProductPage;

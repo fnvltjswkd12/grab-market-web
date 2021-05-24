@@ -22,13 +22,8 @@ function MainPageComponent(){
 
     return (
         <div>
-        <div id="header">
-        <div id="header-area">
-            <img src='images/icons/logo.png' alt="logo" />
-        </div>
-    </div>
-    
-    <div id="body">
+      
+
         <div id="banner">
             <img src="images/banners/banner1.png" alt="banner1"/>
         </div>
@@ -65,9 +60,10 @@ function MainPageComponent(){
     
 
         </div>
-    </div>
 
-    <div id="footer"></div>
+        {/*이 아래 자리가 원래 div id= body태그의 닫히는 태그였음*/}
+    
+
     </div>
 
 
