@@ -35,21 +35,6 @@
     background-color: yellow;
 }
 
-#header-area{
-    width: 1024px;
-    height: 100%; /* 부모 태그의 height를 그대로 받기 위해*/
-    
-    align-items: center;
-  /*  margin: 0 auto; 자식인 header-area가 부모 header에서 가운데 정렬이 된다.*/
-/* header에 display:flex를 넣어주고, header-area에 flex: justify-content: center;를 해줘도 된다. */
-    display: flex; /* 이미지를 가운데 정렬하기 위해서 */
-}
-
-#header-area > img {
-    width: 128px;
-    height: 36px;
-
-}
 
 #banner > img {
     width: 100%; /* 상위 banner, div의 너비를 따라간다는 것

@@ -1,9 +1,30 @@
 import {useParams} from 'react-router-dom';
+import axios from "axios";
+import {useEffect, useState} from "react";
+import './index.css'
 
 function ProductPage(){
 
-const {id} = useParams();
-console.log(params)
+const { id } = useParams();
+const [product, setProduct] = useState(null);
+useEffect(function(){
+
+    axios.get("https://60f43ef8-f705-44e7-a37a-57a464f3ad0b.mock.pstmn.io/products/"+id
+    ).then(function(result){
+
+        setProduct(result.data);
+
+    }).catch(function(error){
+
+        console.error(error);
+
+    });
+
+},[])
+
+if(product === null){
+    return <h1>상품 정보를 받고 있습니다...</h1>
+}
 
     return (
 
@@ -13,8 +34,15 @@ console.log(params)
         <img src={"/"+product.imageUrl} /> 
     </div>
     <div id = "profile-box">
-        <img src="/icons/avatar.png" />
+        <img src="../images/icons/avatar.png" />
         <span>{product.seller}</span>
+    </div>
+
+    <div id="contents-box">
+        <div id="name">{product.name}</div>
+        <div id="price">{product.price}</div>
+        <div id="createdAt">2021년 06월 01일</div>
+        <div id="description">{product.description}</div>
     </div>
 
 </div>

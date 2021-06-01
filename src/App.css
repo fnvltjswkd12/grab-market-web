@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
 html, body, #root, #root > div {
   height: 100%;
 }
@@ -8,6 +14,23 @@ html, body, #root, #root > div {
   display: flex;
   justify-content: center;
   border-bottom: 1px solid gray;
+}
+
+#header-area{
+  width: 1024px;
+  height: 100%; /* 부모 태그의 height를 그대로 받기 위해*/
+  
+  align-items: center;
+/*  margin: 0 auto; 자식인 header-area가 부모 header에서 가운데 정렬이 된다.*/
+/* header에 display:flex를 넣어주고, header-area에 flex: justify-content: center;를 해줘도 된다. */
+  display: flex; /* 이미지를 가운데 정렬하기 위해서 */
+  justify-content: space-between;
+}
+
+#header-area img {
+  width: 128px;
+  height: 36px;
+
 }
 
 #body{
